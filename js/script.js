@@ -64,7 +64,7 @@ todoControl.addEventListener("submit", function (event) {
   };
 
   //Создаем условие чтобы пустое значение не добавлялось
-  if (headerInput.value.trum() !== "") {
+  if (headerInput.value.trim() !== "") {
     toDoData.push(newToDo);
     headerInput.value = "";
   }
