@@ -5,13 +5,14 @@ const headerInput = document.querySelector(".header-input");
 const todoList = document.querySelector(".todo-list");
 const todoCompleted = document.querySelector(".todo-completed");
 
-let toDoData = [];
+const toDoData = JSON.parse(localStorage.getItem("toDoData")) || [];
+render();
 //Создаем переменную и делаем условие если data true то парсим и рендерим
-const data = localStorage.getItem("toDoData");
-if (data) {
-  toDoData = JSON.parse(data);
-  render();
-}
+// const data = localStorage.getItem("toDoData");
+// if (data) {
+//   toDoData = JSON.parse(data);
+//   render();
+// }
 
 function render() {
   todoList.innerHTML = "";
